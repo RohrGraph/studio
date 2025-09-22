@@ -35,41 +35,54 @@ export const data = {
       {
         "name": "Basis",
         "price": "97€",
-        "priceSuffix": "/Monat",
+        "priceSuffix": "/ Monat",
         "recommended": true,
         "features": [
-          { "title": "Professionelle Website", "description": "Steigern Sie Ihr Ansehen mit einem modernen Webauftritt, der Vertrauen schafft und überzeugt." },
-          { "title": "Für Mobilgeräte optimiert", "description": "Erreichen Sie Ihre jungen Kunden perfekt auf dem Smartphone – dort, wo sie sich informieren." },
-          { "title": "Sicheres Hosting (.web.app Domain)", "description": "Ihre Website läuft schnell und zuverlässig auf modernster Infrastruktur, inklusive .web.app-Wunschadresse." },
+          { "title": "Ihre Visitenkarte im Netz", "description": "Steigern Sie Ihr Ansehen mit einem modernen Webauftritt, der Vertrauen schafft und Fahrschüler ab dem ersten Klick überzeugt." },
+          { "title": "Perfekt für Smartphones", "description": "Erreichen Sie Ihre jungen Kunden perfekt auf dem Smartphone – genau dort, wo sie nach einer Fahrschule suchen." },
+          { "title": "Sicheres Hosting & .web.app Domain", "description": "Ihre Website läuft schnell und zuverlässig auf modernster Infrastruktur, inklusive Ihrer persönlichen .web.app-Wunschadresse." },
           { "title": "SSL-Verschlüsselung", "description": "Schützen Sie die Daten Ihrer Besucher und verbessern Sie Ihr Google-Ranking durch höchste Sicherheitsstandards." },
-          { "title": "DSGVO-konformer Auftritt", "description": "Vermeiden Sie Abmahnungen. Wir kümmern uns um Impressum, Datenschutz und Cookie-Hinweise." },
-          { "title": "Automatische Wartung & Updates", "description": "Ihre Website bleibt technisch immer auf dem neuesten Stand, ohne dass Sie sich darum kümmern müssen." },
-          { "title": "1 Inhaltsänderung pro Monat", "description": "Aktuelle Angebote oder neue Mitarbeiterfotos? Eine kleine Änderung pro Monat ist für Sie inklusive." },
+          { "title": "DSGVO-konformer Auftritt", "description": "Vermeiden Sie teure Abmahnungen. Wir kümmern uns um Impressum, Datenschutz und die notwendigen Cookie-Hinweise." },
+          { "title": "Automatische Wartung & Updates", "description": "Ihre Website bleibt technisch immer topfit, ohne dass Sie sich auch nur eine Minute darum kümmern müssen." },
+          { "title": "1 Inhaltsänderung pro Monat", "description": "Aktuelle Angebote oder neue Mitarbeiterfotos? Eine kleine redaktionelle Änderung pro Monat ist für Sie inklusive." },
           { "title": "Support per E-Mail", "description": "Fragen oder Wünsche? Unser Team steht Ihnen unkompliziert und schnell per E-Mail zur Seite." },
-          { "title": "Monatlich kündbar", "description": "Bleiben Sie voll flexibel. Sie gehen kein Risiko ein und können den Service monatlich beenden." }
+          { "title": "Monatlich kündbar", "description": "Testen Sie uns ohne Risiko. Bleiben Sie voll flexibel und entscheiden Sie sich jeden Monat neu für unseren Service." }
         ]
       },
       {
         "name": "Pro",
         "price": "297€",
-        "priceSuffix": "/Monat",
+        "priceSuffix": "/ Monat",
         "recommended": false,
         "features": [
-          { "title": "Alles aus dem Basis-Paket", "description": "Profitieren Sie von allen Vorteilen des Basis-Pakets als Fundament für Ihren Erfolg." },
+          { "title": "Ihre Visitenkarte im Netz", "description": "Steigern Sie Ihr Ansehen mit einem modernen Webauftritt, der Vertrauen schafft und Fahrschüler ab dem ersten Klick überzeugt." },
+          { "title": "Perfekt für Smartphones", "description": "Erreichen Sie Ihre jungen Kunden perfekt auf dem Smartphone – genau dort, wo sie nach einer Fahrschule suchen." },
+          { "title": "Sicheres Hosting", "description": "Ihre Website läuft schnell und zuverlässig auf modernster Infrastruktur." },
+          { "title": "SSL-Verschlüsselung", "description": "Schützen Sie die Daten Ihrer Besucher und verbessern Sie Ihr Google-Ranking durch höchste Sicherheitsstandards." },
+          { "title": "DSGVO-konformer Auftritt", "description": "Vermeiden Sie teure Abmahnungen. Wir kümmern uns um Impressum, Datenschutz und die notwendigen Cookie-Hinweise." },
+          { "title": "Automatische Wartung & Updates", "description": "Ihre Website bleibt technisch immer topfit, ohne dass Sie sich auch nur eine Minute darum kümmern müssen." },
           { "title": "Eigene .de Wunschdomain", "description": "Stärken Sie Ihre lokale Marke mit einer eigenen .de-Domain, die wir für Sie registrieren und verwalten." },
           { "title": "Persönlicher Telefon/Zoom Support", "description": "Für eine noch schnellere und direktere Klärung Ihrer Anliegen bieten wir Ihnen persönlichen Support." },
           { "title": "Bis zu 3 Änderungen pro Monat", "description": "Mehr Flexibilität für Ihr wachsendes Geschäft – wir setzen monatlich mehrere Anpassungen für Sie um." },
           { "title": "SEO Boost & Analytics", "description": "Werden Sie bei Google besser gefunden und verstehen Sie, was Ihre Besucher interessiert, um Ihr Angebot zu optimieren." },
-          { "title": "Monatlich kündbar", "description": "Auch im Pro-Paket genießen Sie volle Freiheit und können sich jederzeit zum Monatsende umentscheiden." }
+          { "title": "Monatlich kündbar", "description": "Testen Sie uns ohne Risiko. Bleiben Sie voll flexibel und entscheiden Sie sich jeden Monat neu für unseren Service." }
         ]
       },
       {
         "name": "Premium",
         "price": "497€",
-        "priceSuffix": "/Monat",
+        "priceSuffix": "/ Monat",
         "recommended": false,
         "features": [
-          { "title": "Alle Vorteile des Pro-Pakets", "description": "Das Rundum-Sorglos-Paket, das alle Leistungen der anderen Pakete und noch mehr enthält." },
+          { "title": "Ihre Visitenkarte im Netz", "description": "Steigern Sie Ihr Ansehen mit einem modernen Webauftritt, der Vertrauen schafft und Fahrschüler ab dem ersten Klick überzeugt." },
+          { "title": "Perfekt für Smartphones", "description": "Erreichen Sie Ihre jungen Kunden perfekt auf dem Smartphone – genau dort, wo sie nach einer Fahrschule suchen." },
+          { "title": "Sicheres Hosting", "description": "Ihre Website läuft schnell und zuverlässig auf modernster Infrastruktur." },
+          { "title": "SSL-Verschlüsselung", "description": "Schützen Sie die Daten Ihrer Besucher und verbessern Sie Ihr Google-Ranking durch höchste Sicherheitsstandards." },
+          { "title": "DSGVO-konformer Auftritt", "description": "Vermeiden Sie teure Abmahnungen. Wir kümmern uns um Impressum, Datenschutz und die notwendigen Cookie-Hinweise." },
+          { "title": "Automatische Wartung & Updates", "description": "Ihre Website bleibt technisch immer topfit, ohne dass Sie sich auch nur eine Minute darum kümmern müssen." },
+          { "title": "Eigene .de Wunschdomain", "description": "Stärken Sie Ihre lokale Marke mit einer eigenen .de-Domain, die wir für Sie registrieren und verwalten." },
+          { "title": "Persönlicher Telefon/Zoom Support", "description": "Für eine noch schnellere und direktere Klärung Ihrer Anliegen bieten wir Ihnen persönlichen Support." },
+          { "title": "SEO Boost & Analytics", "description": "Werden Sie bei Google besser gefunden und verstehen Sie, was Ihre Besucher interessiert, um Ihr Angebot zu optimieren." },
           { "title": "Full-Service-Betreuung", "description": "Wir werden zu Ihrer externen Marketing-Abteilung und kümmern uns proaktiv um Inhalte und auf Wunsch auch Werbeanzeigen." },
           { "title": "Zusätzliche Landingpages", "description": "Bewerben Sie spezielle Kurse oder Aktionen mit eigenen, zielgerichteten Landingpages für maximalen Erfolg." },
           { "title": "Dedizierter Ansprechpartner", "description": "Ihr persönlicher Experte kennt Ihr Geschäft und steht Ihnen strategisch zur Seite." },
