@@ -24,7 +24,7 @@ export default function Home() {
              <Link href="/preise" className="text-foreground/60 transition-colors hover:text-foreground/80">
               Preise
             </Link>
-             <Link href="#prozess" className="text-foreground/60 transition-colors hover:text-foreground/80">
+             <Link href="/ablauf" className="text-foreground/60 transition-colors hover:text-foreground/80">
               Ablauf
             </Link>
           </nav>

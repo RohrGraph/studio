@@ -1,4 +1,6 @@
 import { data } from '@/lib/data';
+import Link from 'next/link';
+import { Button } from './ui/button';
 
 export default function Process() {
   const { headline, subline, steps } = data.process;
@@ -27,6 +29,11 @@ export default function Process() {
                 <p className="mt-2 text-muted-foreground">{item.text}</p>
               </div>
             ))}
+          </div>
+           <div className="mt-16 text-center">
+              <Button asChild variant="outline">
+                  <Link href="/ablauf">Mehr zum Ablauf erfahren</Link>
+              </Button>
           </div>
         </div>
       </div>

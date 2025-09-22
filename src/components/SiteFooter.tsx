@@ -19,6 +19,9 @@ export default function SiteFooter() {
             <Link href="/preise" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
                 Preise
             </Link>
+             <Link href="/ablauf" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+                Ablauf
+            </Link>
             {links.map(link => (
                 <Link key={link.href} href={link.href} className="text-sm text-muted-foreground transition-colors hover:text-foreground">
                     {link.label}

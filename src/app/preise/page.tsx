@@ -29,7 +29,7 @@ export default function PricingPage() {
              <Link href="/preise" className="text-foreground transition-colors hover:text-foreground/80">
               Preise
             </Link>
-             <Link href="/#prozess" className="text-foreground/60 transition-colors hover:text-foreground/80">
+             <Link href="/ablauf" className="text-foreground/60 transition-colors hover:text-foreground/80">
               Ablauf
             </Link>
           </nav>
@@ -42,71 +42,74 @@ export default function PricingPage() {
       </header>
       <main className="flex-1">
         <section id="preise" className="bg-background" aria-labelledby="pricing-headline">
-            <div className="container py-12 md:py-16 lg:py-20">
-                <div className="mx-auto max-w-3xl text-center">
-                    <h1 id="pricing-headline" className="text-4xl sm:text-5xl lg:text-6xl">{headline}</h1>
-                </div>
-
-                <div className="mx-auto mt-16 max-w-5xl">
-                    <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-3">
-                        {plans.map((plan) => (
-                          <Card 
-                            key={plan.name}
-                            onClick={() => setActivePlan(plan.name)}
-                            className={cn(
-                              'cursor-pointer shadow-lg',
-                              activePlan !== plan.name && 'bg-secondary/30 hover:bg-secondary/50',
-                              activePlan === plan.name && 'border-2 border-primary shadow-2xl',
-                              'relative'
-                            )}
-                          >
-                             {plan.recommended && (
-                                <div className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-green-600 px-4 py-1 text-sm font-bold text-white">
-                                  Beliebteste Option
-                                </div>
-                              )}
-                            <CardHeader className="text-center">
-                              <p className="font-semibold text-primary">{plan.name}</p>
-                              <CardTitle className="!mt-2 text-4xl tracking-tight">
-                                {plan.price}
-                                <span className="text-base font-normal text-muted-foreground">{plan.priceSuffix}</span>
-                              </CardTitle>
-                            </CardHeader>
-                          </Card>
-                        ))}
-                    </div>
-
-                    <div className="mt-16">
-                      <Card className="shadow-lg border-primary/20">
-                          <CardContent className="pt-8">
-                              <ul className="space-y-4">
-                                  {selectedPlan.features.map((feature, index) => (
-                                      <li key={index} className="flex items-start gap-4">
-                                          <Check className="mt-1 h-5 w-5 flex-shrink-0 text-primary" />
-                                          <div>
-                                              <h4 className="font-semibold">{feature.title}</h4>
-                                              <p className="text-muted-foreground">{feature.description}</p>
-                                          </div>
-                                      </li>
-                                  ))}
-                              </ul>
-                          </CardContent>
-                      </Card>
-                      <div className="mt-12 flex justify-center">
-                          <Button 
-                              size="lg"
-                              className='w-full max-w-md'
-                              asChild
-                          >
-                              <Link href="#kontakt">{cta.label}</Link>
-                          </Button>
-                      </div>
-                    </div>
-                </div>
-                 <div className="mt-8 text-center text-sm text-muted-foreground">
-                    <p>{disclaimer}</p>
-                </div>
+          <div className="container py-12 md:py-16 lg:py-20">
+            <div className="mx-auto max-w-3xl text-center">
+              <h1 id="pricing-headline" className="text-4xl sm:text-5xl lg:text-6xl">{headline}</h1>
+              <p className="mt-4 text-lg text-muted-foreground">
+                  Keine versteckten Kosten, keine langfristige Bindung. Volle Transparenz von Anfang an.
+                  Wählen Sie den Plan, der am besten zu Ihrer Fahrschule passt.
+              </p>
             </div>
+
+            <div className="mt-16">
+              <div className="flex justify-center">
+                <div className="grid w-full max-w-5xl grid-cols-1 gap-4 sm:grid-cols-3">
+                    {plans.map((plan) => (
+                      <div 
+                        key={plan.name}
+                        onClick={() => setActivePlan(plan.name)}
+                        className={cn(
+                          'cursor-pointer rounded-xl p-6 text-center transition-all',
+                          activePlan === plan.name ? 'bg-card ring-2 ring-primary shadow-2xl' : 'bg-card/50 hover:bg-card/80',
+                           plan.recommended && 'relative'
+                        )}
+                      >
+                         {plan.recommended && (
+                            <div className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-green-600 px-4 py-1 text-sm font-bold text-white">
+                              Beliebteste Option
+                            </div>
+                          )}
+                          <p className="font-semibold text-primary">{plan.name}</p>
+                          <p className="!mt-2 text-3xl font-bold tracking-tight">
+                            {plan.price}
+                             <span className="text-base font-normal text-muted-foreground"> / Monat</span>
+                          </p>
+                      </div>
+                    ))}
+                </div>
+              </div>
+            </div>
+
+            <div className="mx-auto mt-16 max-w-4xl">
+              <Card className="shadow-lg border-primary/20">
+                  <CardContent className="pt-8">
+                      <ul className="space-y-4">
+                          {selectedPlan.features.map((feature, index) => (
+                              <li key={index} className="flex items-start gap-4">
+                                  <Check className="mt-1 h-5 w-5 flex-shrink-0 text-primary" />
+                                  <div>
+                                      <h4 className="font-semibold">{feature.title}</h4>
+                                      <p className="text-muted-foreground">{feature.description}</p>
+                                  </div>
+                              </li>
+                          ))}
+                      </ul>
+                  </CardContent>
+              </Card>
+              <div className="mt-12 flex justify-center">
+                  <Button 
+                      size="lg"
+                      className='w-full max-w-md'
+                      asChild
+                  >
+                      <Link href="#kontakt">{cta.label}</Link>
+                  </Button>
+              </div>
+            </div>
+            <div className="mt-8 text-center text-sm text-muted-foreground">
+                <p>{disclaimer}</p>
+            </div>
+          </div>
         </section>
         <FAQ />
         <ContactForm />
