@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Car, FileCheck2, Paintbrush, Rocket } from 'lucide-react';
+import { Car, FileCheck2, Paintbrush, Rocket, ArrowRight } from 'lucide-react';
 import SiteFooter from '@/components/SiteFooter';
 import { data } from '@/lib/data';
 
@@ -8,18 +8,36 @@ export default function AblaufPage() {
   const steps = [
     {
       icon: FileCheck2,
-      title: "1. Daten übermitteln",
-      text: "Nach der Paketwahl erhalten Sie Zugang zu einem einfachen Online-Formular, über das Sie uns alle relevanten Informationen und Dateien für Ihre Website zukommen lassen.",
+      title: "Daten übermitteln",
+      text: "Nach der Paketwahl erhalten Sie Zugang zu einem einfachen Online-Formular. Hier können Sie uns alle relevanten Informationen und Dateien für Ihre Website zukommen lassen.",
+      details: [
+          "Ihre Wünsche zu Farben und Design",
+          "Logo Ihrer Fahrschule",
+          "Texte und Bilder, die Sie verwenden möchten",
+          "Informationen für Impressum & Datenschutz"
+      ]
     },
     {
       icon: Paintbrush,
-      title: "2. Design & Umsetzung",
+      title: "Design & Umsetzung",
       text: "Basierend auf Ihren Angaben erstellen unsere Experten den ersten Entwurf. Wir kümmern uns um ein modernes Design, das perfekt zu Ihrer Fahrschule passt.",
+       details: [
+          "Erstellung eines professionellen Layouts",
+          "Optimierung für alle Endgeräte (Handy, Tablet, PC)",
+          "Integration Ihrer Inhalte und Bilder",
+          "Technische Einrichtung inkl. SSL und Hosting"
+      ]
     },
     {
       icon: Rocket,
-      title: "3. Livegang & Service",
-      text: "Nach Ihrer Freigabe geht Ihre Website online. Wir kümmern uns weiterhin um Wartung und Sicherheit, damit Ihr digitaler Auftritt erfolgreich bleibt."
+      title: "Livegang & Service",
+      text: "Nach Ihrer Freigabe geht Ihre Website online. Wir kümmern uns weiterhin um Wartung und Sicherheit, damit Ihr digitaler Auftritt erfolgreich bleibt.",
+       details: [
+          "Finale Prüfung und Abstimmung mit Ihnen",
+          "Veröffentlichung Ihrer neuen Website",
+          "Laufende technische Wartung und Sicherheitsupdates",
+          "Umfassender Support für Ihre zukünftigen Anliegen"
+      ]
     }
   ];
 
@@ -57,20 +75,42 @@ export default function AblaufPage() {
               </p>
             </div>
 
-            <div className="mx-auto mt-16 grid max-w-5xl grid-cols-1 gap-x-8 gap-y-12 md:grid-cols-3">
+            <div className="mx-auto mt-16 grid max-w-5xl grid-cols-1 gap-12 md:gap-16">
               {steps.map((step, index) => {
                 const Icon = step.icon;
                 return (
-                  <div key={index} className="flex flex-col items-center text-center">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
-                      <Icon className="h-7 w-7" />
+                  <div key={index} className="grid items-start gap-8 md:grid-cols-[auto_1fr]">
+                    <div className="flex flex-col items-center gap-4">
+                        <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
+                        <Icon className="h-8 w-8" />
+                        </div>
+                        {index < steps.length - 1 && (
+                            <div className="h-16 w-px bg-border md:h-full"></div>
+                        )}
                     </div>
-                    <h3 className="mt-6 text-xl font-semibold">{step.title}</h3>
-                    <p className="mt-2 text-muted-foreground">{step.text}</p>
+
+                    <div className="pt-2">
+                      <p className="text-sm font-semibold uppercase tracking-wider text-primary">Schritt {index + 1}</p>
+                      <h2 className="mt-2 !text-3xl">{step.title}</h2>
+                      <p className="mt-4 text-lg text-muted-foreground">{step.text}</p>
+                      
+                       <div className="mt-6 rounded-lg border bg-card p-6">
+                            <h4 className="font-semibold">Was wir in diesem Schritt von Ihnen benötigen:</h4>
+                            <ul className="mt-4 space-y-3">
+                                {step.details.map((detail, detailIndex) => (
+                                    <li key={detailIndex} className="flex items-start gap-3">
+                                        <ArrowRight className="h-5 w-5 flex-shrink-0 text-primary mt-1" />
+                                        <span className='text-muted-foreground'>{detail}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </div>
                   </div>
                 )
               })}
             </div>
+
              <div className="mt-16 text-center">
                 <Button size="lg" asChild>
                     <Link href="/preise">Jetzt Ihr Paket entdecken</Link>
