@@ -6,7 +6,6 @@ import ProblemSolution from '@/components/ProblemSolution';
 import Process from '@/components/Process';
 import Pricing from '@/components/Pricing';
 import Benefits from '@/components/Benefits';
-import SocialProof from '@/components/SocialProof';
 import SiteFooter from '@/components/SiteFooter';
 import { Car } from 'lucide-react';
 
@@ -40,7 +39,6 @@ export default function Home() {
         <Process />
         <Pricing />
         <Benefits />
-        <SocialProof />
       </main>
       <SiteFooter />
     </div>
