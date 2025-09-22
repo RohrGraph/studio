@@ -15,7 +15,7 @@ export default function Hero() {
               <br />
               <span className="text-primary">Ab 97€/Monat</span>
               <br />
-              Komplett ohne Stress
+              Ohne Einmalkosten
             </h1>
             <ul className="mt-6 flex flex-wrap justify-center gap-x-8 gap-y-2 text-foreground/80">
               <li className="flex items-center gap-2">
