@@ -30,6 +30,14 @@ export default function Hero() {
                 <Check className="h-5 w-5 text-primary" />
                 Monatlich Kündbar
               </li>
+              <li className="flex items-center gap-2">
+                <Check className="h-5 w-5 text-primary" />
+                inkl. Hosting + SSL
+              </li>
+               <li className="flex items-center gap-2">
+                <Check className="h-5 w-5 text-primary" />
+                DSGVO Konform
+              </li>
             </ul>
             <div className="mt-8 flex flex-wrap justify-center gap-4">
               <Button size="lg" asChild>
