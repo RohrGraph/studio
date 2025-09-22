@@ -3,7 +3,7 @@ export const data = {
     "title": "Fahrschul-Websites | Ohne Stress zur neuen Website",
     "description": "Professionelle Websites für Fahrschulen im Abo ab 97€/Monat. Keine Einmalkosten, inkl. Hosting, Wartung & DSGVO.",
     "domain": "fahrschul-web.site",
-    "primaryCTA": { "label": "Demo ansehen", "href": "#demos" },
+    "primaryCTA": { "label": "Alle Pakete ansehen", "href": "/preise" },
     "secondaryCTA": { "label": "Jetzt kostenlos beraten lassen", "href": "#kontakt" }
   },
   "hero": {
@@ -56,6 +56,7 @@ export const data = {
         "recommended": false,
         "features": [
           "Alles aus Basis",
+          "Eigene .de Domain",
           "Telefon/Zoom Support",
           "2–3 Änderungen pro Monat",
           "SEO Boost & Analytics",

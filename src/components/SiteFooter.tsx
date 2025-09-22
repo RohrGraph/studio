@@ -16,6 +16,9 @@ export default function SiteFooter() {
           </p>
         </div>
         <nav className="flex gap-4 sm:gap-6">
+            <Link href="/preise" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+                Preise
+            </Link>
             {links.map(link => (
                 <Link key={link.href} href={link.href} className="text-sm text-muted-foreground transition-colors hover:text-foreground">
                     {link.label}
