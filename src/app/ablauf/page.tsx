@@ -8,8 +8,9 @@ export default function AblaufPage() {
   const steps = [
     {
       icon: FileCheck2,
-      title: "Daten übermitteln",
-      text: "Nach der Paketwahl erhalten Sie Zugang zu einem einfachen Online-Formular. Hier können Sie uns alle relevanten Informationen und Dateien für Ihre Website zukommen lassen.",
+      title: "Ihr einziger Schritt: Daten übermitteln",
+      text: "Für Sie ist der Prozess denkbar einfach. Nach der Paketwahl erhalten Sie Zugang zu unserem benutzerfreundlichen Online-Formular. Hier können Sie uns bequem alle relevanten Informationen für Ihre Website zukommen lassen. Das ist der einzige Schritt, den Sie aktiv gehen müssen.",
+      details_title: "Was wir von Ihnen benötigen (ganz einfach online):",
       details: [
           "Ihre Wünsche zu Farben und Design",
           "Logo Ihrer Fahrschule",
@@ -19,8 +20,9 @@ export default function AblaufPage() {
     },
     {
       icon: Paintbrush,
-      title: "Design & Umsetzung",
-      text: "Basierend auf Ihren Angaben erstellen unsere Experten den ersten Entwurf. Wir kümmern uns um ein modernes Design, das perfekt zu Ihrer Fahrschule passt.",
+      title: "Unsere Aufgabe: Design & Umsetzung",
+      text: "Sobald Ihre Daten bei uns sind, legen wir los! Innerhalb von nur 2 Werktagen erstellen unsere Experten den ersten Entwurf. Wir kümmern uns um ein modernes Design, das perfekt zu Ihrer Fahrschule passt.",
+       details_title: "Was wir in dieser Zeit für Sie erledigen:",
        details: [
           "Erstellung eines professionellen Layouts",
           "Optimierung für alle Endgeräte (Handy, Tablet, PC)",
@@ -30,8 +32,9 @@ export default function AblaufPage() {
     },
     {
       icon: Rocket,
-      title: "Livegang & Service",
-      text: "Nach Ihrer Freigabe geht Ihre Website online. Wir kümmern uns weiterhin um Wartung und Sicherheit, damit Ihr digitaler Auftritt erfolgreich bleibt.",
+      title: "Unsere Aufgabe: Livegang & Service",
+      text: "Nach Ihrer Freigabe geht Ihre Website online – ebenfalls innerhalb der 2 Werktage. Wir kümmern uns auch danach weiterhin um Wartung und Sicherheit, damit Ihr digitaler Auftritt erfolgreich bleibt.",
+       details_title: "Unser Service für Ihren Erfolg:",
        details: [
           "Finale Prüfung und Abstimmung mit Ihnen",
           "Veröffentlichung Ihrer neuen Website",
@@ -69,7 +72,7 @@ export default function AblaufPage() {
         <section id="ablauf" aria-labelledby="ablauf-headline">
           <div className="container">
             <div className="mx-auto max-w-3xl text-center">
-              <h1 id="ablauf-headline">Klar und einfach: Ihr Weg zur neuen Website</h1>
+              <h1 id="ablauf-headline">Ihr Weg zur neuen Website: 1 Aufgabe für Sie, 2 Tage für uns.</h1>
               <p className="mt-4 text-lg text-muted-foreground">
                 Wir haben den Prozess so gestaltet, dass er für Sie maximal unkompliziert ist. Konzentrieren Sie sich auf Ihr Geschäft, wir kümmern uns um den Rest.
               </p>
@@ -95,7 +98,7 @@ export default function AblaufPage() {
                       <p className="mt-4 text-lg text-muted-foreground">{step.text}</p>
                       
                        <div className="mt-6 rounded-lg border bg-card p-6">
-                            <h4 className="font-semibold">Was wir in diesem Schritt von Ihnen benötigen:</h4>
+                            <h4 className="font-semibold">{step.details_title}</h4>
                             <ul className="mt-4 space-y-3">
                                 {step.details.map((detail, detailIndex) => (
                                     <li key={detailIndex} className="flex items-start gap-3">
