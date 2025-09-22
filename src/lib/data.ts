@@ -38,15 +38,15 @@ export const data = {
         "priceSuffix": "/Monat",
         "recommended": true,
         "features": [
-          "Professionelle Website",
-          "Handy freundlich",
-          "Hosting (.web.app Domain)",
-          "SSL Zertifikat",
-          "DSGVO konform",
-          "Wartung & Updates",
-          "1 Änderung pro Monat",
-          "Nur asynchrone Kommunikation",
-          "monatlich kündbar"
+          { "title": "Professionelle Website", "description": "Wir erstellen eine moderne und ansprechende Website, die Ihre Fahrschule perfekt repräsentiert." },
+          { "title": "Handy freundlich", "description": "Ihre Website wird auf allen Geräten, vom Smartphone bis zum Desktop, optimal dargestellt." },
+          { "title": "Hosting (.web.app Domain)", "description": "Ihre Website wird sicher auf unseren Servern gehostet und ist unter einer .web.app-Domain erreichbar." },
+          { "title": "SSL Zertifikat", "description": "Für die Sicherheit Ihrer Besucher und ein besseres Ranking ist ein SSL-Zertifikat standardmäßig inklusive." },
+          { "title": "DSGVO konform", "description": "Wir sorgen dafür, dass Ihre Website alle aktuellen Datenschutzanforderungen der DSGVO erfüllt." },
+          { "title": "Wartung & Updates", "description": "Technische Wartungen und notwendige Updates werden von uns automatisch im Hintergrund durchgeführt." },
+          { "title": "1 Änderung pro Monat", "description": "Eine kleine inhaltliche Änderung, wie z.B. eine Textanpassung, ist pro Monat im Paket enthalten." },
+          { "title": "Nur asynchrone Kommunikation", "description": "Die Kommunikation für Support und Änderungen erfolgt unkompliziert per E-Mail." },
+          { "title": "monatlich kündbar", "description": "Sie bleiben flexibel, denn der Vertrag ist jederzeit ohne lange Fristen zum Monatsende kündbar." }
         ]
       },
       {
@@ -55,12 +55,12 @@ export const data = {
         "priceSuffix": "/Monat",
         "recommended": false,
         "features": [
-          "Alles aus Basis",
-          "Eigene .de Domain",
-          "Telefon/Zoom Support",
-          "2–3 Änderungen pro Monat",
-          "SEO Boost & Analytics",
-          "monatlich kündbar"
+          { "title": "Alles aus Basis", "description": "Beinhaltet alle Leistungen des Basis-Pakets als Grundlage für professionelle Ansprüche." },
+          { "title": "Eigene .de Domain", "description": "Wir registrieren Ihre persönliche .de-Wunschdomain für einen professionellen Auftritt." },
+          { "title": "Telefon/Zoom Support", "description": "Für komplexere Anliegen und persönliche Absprachen stehen wir Ihnen auch telefonisch oder per Zoom zur Verfügung." },
+          { "title": "2–3 Änderungen pro Monat", "description": "Sie können monatlich mehrere Anpassungen an Texten und Bildern vornehmen lassen." },
+          { "title": "SEO Boost & Analytics", "description": "Wir optimieren Ihre Seite für Suchmaschinen und Sie erhalten Einblick in die Besucherstatistiken." },
+          { "title": "monatlich kündbar", "description": "Volle Flexibilität durch eine monatliche Kündigungsoption, falls sich Ihre Bedürfnisse ändern." }
         ]
       },
       {
@@ -69,11 +69,11 @@ export const data = {
         "priceSuffix": "/Monat",
         "recommended": false,
         "features": [
-          "Alles aus Pro",
-          "Full Service (Content, Ads etc.)",
-          "Landingpages inklusive",
-          "Dedizierter Account Manager",
-          "monatlich kündbar"
+          { "title": "Alles aus Pro", "description": "Umfasst alle Vorteile des Pro-Pakets für den maximalen Serviceumfang." },
+          { "title": "Full Service (Content, Ads etc.)", "description": "Wir kümmern uns auf Wunsch auch um die Erstellung von Inhalten oder die Schaltung von Werbeanzeigen." },
+          { "title": "Landingpages inklusive", "description": "Für spezielle Aktionen oder Kampagnen erstellen wir Ihnen bei Bedarf eigene Landingpages." },
+          { "title": "Dedizierter Account Manager", "description": "Ein persönlicher Ansprechpartner kümmert sich um all Ihre Belange und Wünsche." },
+          { "title": "monatlich kündbar", "description": "Auch unser Premium-Paket bietet Ihnen die Freiheit, monatlich zu kündigen." }
         ]
       }
     ]
@@ -86,20 +86,6 @@ export const data = {
       { "icon": "Euro", "title": "Keine teuren Einmalkosten", "text": "Sparen Sie sich die hohe Anfangsinvestition." },
       { "icon": "Smile", "title": "Einfache Monatspauschale", "text": "Ein fester Preis für alles. Planbar und transparent." },
       { "icon": "CheckCircle2", "title": "Weniger als 1 Schüler/Monat", "text": "Die Kosten für die Website haben Sie schnell wieder drin." }
-    ]
-  },
-  "socialProof": {
-    "headline": "Vertrauen & Qualität",
-    "badge": "Made in Germany – DSGVO sicher",
-    "quotes": [
-      { "text": "Unsere neue Seite war in zwei Tagen online. Super Service!", "author": "Fahrschule Musterstadt" },
-      { "text": "Endlich eine Website, die modern aussieht und auf dem Handy funktioniert.", "author": "Fahrschule Beispielhausen" },
-      { "text": "Der Preis ist unschlagbar. Wir sparen uns viel Zeit und Nerven.", "author": "Fahrschule Testorf" }
-    ],
-    "demos": [
-        { "src": "https://picsum.photos/seed/demo1/800/600", "alt": "Demo Fahrschule City", "hint": "driving school website" },
-        { "src": "https://picsum.photos/seed/demo2/800/600", "alt": "Demo Fahrschule DriveSafe", "hint": "modern driving school" },
-        { "src": "https://picsum.photos/seed/demo3/800/600", "alt": "Demo Fahrschule Speedster", "hint": "clean website driving" }
     ]
   },
   "contact": {

@@ -72,15 +72,14 @@ export default function PricingPage() {
                                         <p className="text-sm text-muted-foreground">{plan.priceSuffix}</p>
                                     </CardHeader>
                                     <CardContent>
-                                        <ul className="space-y-4">
-                                        {plan.features.map((item) => (
-                                            <li key={item} className="flex items-start gap-3">
-                                            <Check className="mt-1 h-5 w-5 flex-shrink-0 text-primary" />
-                                            <span className="text-foreground/90">{item}</span>
-                                            </li>
-
-                                        ))}
-                                        </ul>
+                                        <div className="space-y-4 text-left">
+                                            {plan.features.map((feature, index) => (
+                                                <div key={index}>
+                                                    <h3 className="font-semibold">{feature.title}</h3>
+                                                    <p className="text-muted-foreground">{feature.description}</p>
+                                                </div>
+                                            ))}
+                                        </div>
                                     </CardContent>
                                     <CardFooter className="flex-col gap-4 pt-6">
                                         <Button 

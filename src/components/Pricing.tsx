@@ -39,10 +39,10 @@ export default function Pricing() {
               </CardHeader>
               <CardContent>
                 <ul className="space-y-4">
-                  {recommendedPlan.features.slice(0, 5).map((item) => (
-                    <li key={item} className="flex items-start gap-3">
+                  {recommendedPlan.features.slice(0, 5).map((feature) => (
+                    <li key={feature.title} className="flex items-start gap-3">
                       <Check className="mt-1 h-5 w-5 flex-shrink-0 text-primary" />
-                      <span className="text-foreground/90">{item}</span>
+                      <span className="text-foreground/90">{feature.title}</span>
                     </li>
                   ))}
                    <li className="flex items-start gap-3">
