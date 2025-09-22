@@ -53,9 +53,24 @@ export default function PricingPage() {
                     <Tabs defaultValue={recommendedPlan.name} className="w-full">
                         <TabsList className="grid w-full grid-cols-1 gap-4 bg-transparent p-0 sm:grid-cols-3">
                             {plans.map((plan) => (
-                                <TabsTrigger key={plan.name} value={plan.name} className="h-auto flex-col items-center justify-center gap-2 rounded-xl p-6 text-xl data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=inactive]:bg-secondary/50 sm:flex-row">
-                                    <span className="font-bold">{plan.name}</span>
-                                    <span className="font-normal">{plan.price}</span>
+                                <TabsTrigger key={plan.name} value={plan.name} asChild>
+                                  <Card className={cn(
+                                    'cursor-pointer shadow-lg data-[state=inactive]:bg-secondary/30 data-[state=inactive]:hover:bg-secondary/50 data-[state=active]:border-primary data-[state=active]:shadow-2xl',
+                                    plan.recommended && "border-green-600"
+                                  )}>
+                                     {plan.recommended && (
+                                        <div className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-green-600 px-4 py-1 text-sm font-bold text-white">
+                                          Beliebteste Option
+                                        </div>
+                                      )}
+                                    <CardHeader className="text-center">
+                                      <p className="font-semibold text-primary">{plan.name}</p>
+                                      <CardTitle className="!mt-2 text-4xl tracking-tight">
+                                        {plan.price}
+                                      </CardTitle>
+                                      <p className="text-sm text-muted-foreground">{plan.priceSuffix}</p>
+                                    </CardHeader>
+                                  </Card>
                                 </TabsTrigger>
                             ))}
                         </TabsList>
@@ -64,7 +79,7 @@ export default function PricingPage() {
                                 <div className="mt-10">
                                     <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
                                         {plan.features.map((feature, index) => (
-                                            <Card key={index} className="flex flex-col">
+                                            <Card key={index} className="flex flex-col border-primary/50">
                                                 <CardHeader>
                                                     <CardTitle className="text-xl">{feature.title}</CardTitle>
                                                 </CardHeader>
