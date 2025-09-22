@@ -1,13 +1,9 @@
+"use client";
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { Check } from 'lucide-react';
 import { data } from '@/lib/data';
 import { Button } from '@/components/ui/button';
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from "@/components/ui/tabs"
 import { Card, CardHeader, CardTitle, CardContent, CardFooter, CardDescription } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
 import SiteFooter from '@/components/SiteFooter';
@@ -18,6 +14,8 @@ import FAQ from '@/components/FAQ';
 export default function PricingPage() {
   const { headline, plans, cta, disclaimer } = data.pricing;
   const recommendedPlan = plans.find(p => p.recommended) || plans[0];
+  const [activePlan, setActivePlan] = useState(recommendedPlan.name);
+  const selectedPlan = plans.find(p => p.name === activePlan) || recommendedPlan;
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -50,61 +48,60 @@ export default function PricingPage() {
                 </div>
 
                 <div className="mx-auto mt-16 max-w-5xl">
-                    <Tabs defaultValue={recommendedPlan.name} className="w-full">
-                        <TabsList className="grid w-full grid-cols-1 gap-4 bg-transparent p-0 sm:grid-cols-3">
-                            {plans.map((plan) => (
-                                <TabsTrigger key={plan.name} value={plan.name} asChild>
-                                  <Card className={cn(
-                                    'cursor-pointer shadow-lg data-[state=inactive]:bg-secondary/30 data-[state=inactive]:hover:bg-secondary/50 data-[state=active]:border-2 data-[state=active]:border-primary data-[state=active]:shadow-2xl relative',
-                                  )}>
-                                     {plan.recommended && (
-                                        <div className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-green-600 px-4 py-1 text-sm font-bold text-white">
-                                          Beliebteste Option
-                                        </div>
-                                      )}
-                                    <CardHeader className="text-center">
-                                      <p className="font-semibold text-primary">{plan.name}</p>
-                                      <CardTitle className="!mt-2 text-4xl tracking-tight">
-                                        {plan.price}
-                                        <span className="text-base font-normal text-muted-foreground">{plan.priceSuffix}</span>
-                                      </CardTitle>
-                                    </CardHeader>
-                                  </Card>
-                                </TabsTrigger>
-                            ))}
-                        </TabsList>
+                    <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-3">
+                        {plans.map((plan) => (
+                          <Card 
+                            key={plan.name}
+                            onClick={() => setActivePlan(plan.name)}
+                            className={cn(
+                              'cursor-pointer shadow-lg',
+                              activePlan !== plan.name && 'bg-secondary/30 hover:bg-secondary/50',
+                              activePlan === plan.name && 'border-2 border-primary shadow-2xl',
+                              'relative'
+                            )}
+                          >
+                             {plan.recommended && (
+                                <div className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-green-600 px-4 py-1 text-sm font-bold text-white">
+                                  Beliebteste Option
+                                </div>
+                              )}
+                            <CardHeader className="text-center">
+                              <p className="font-semibold text-primary">{plan.name}</p>
+                              <CardTitle className="!mt-2 text-4xl tracking-tight">
+                                {plan.price}
+                                <span className="text-base font-normal text-muted-foreground">{plan.priceSuffix}</span>
+                              </CardTitle>
+                            </CardHeader>
+                          </Card>
+                        ))}
+                    </div>
 
-                        <div className="mt-16">
-                            {plans.map((plan) => (
-                                <TabsContent key={plan.name} value={plan.name} className="mt-0">
-                                    <Card className="shadow-lg border-primary/20">
-                                        <CardContent className="pt-8">
-                                            <ul className="space-y-4">
-                                                {plan.features.map((feature, index) => (
-                                                    <li key={index} className="flex items-start gap-4">
-                                                        <Check className="mt-1 h-5 w-5 flex-shrink-0 text-primary" />
-                                                        <div>
-                                                            <h4 className="font-semibold">{feature.title}</h4>
-                                                            <p className="text-muted-foreground">{feature.description}</p>
-                                                        </div>
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                        </CardContent>
-                                    </Card>
-                                    <div className="mt-12 flex justify-center">
-                                        <Button 
-                                            size="lg"
-                                            className='w-full max-w-md'
-                                            asChild
-                                        >
-                                            <Link href="#kontakt">{cta.label}</Link>
-                                        </Button>
-                                    </div>
-                                </TabsContent>
-                            ))}
-                        </div>
-                    </Tabs>
+                    <div className="mt-16">
+                      <Card className="shadow-lg border-primary/20">
+                          <CardContent className="pt-8">
+                              <ul className="space-y-4">
+                                  {selectedPlan.features.map((feature, index) => (
+                                      <li key={index} className="flex items-start gap-4">
+                                          <Check className="mt-1 h-5 w-5 flex-shrink-0 text-primary" />
+                                          <div>
+                                              <h4 className="font-semibold">{feature.title}</h4>
+                                              <p className="text-muted-foreground">{feature.description}</p>
+                                          </div>
+                                      </li>
+                                  ))}
+                              </ul>
+                          </CardContent>
+                      </Card>
+                      <div className="mt-12 flex justify-center">
+                          <Button 
+                              size="lg"
+                              className='w-full max-w-md'
+                              asChild
+                          >
+                              <Link href="#kontakt">{cta.label}</Link>
+                          </Button>
+                      </div>
+                    </div>
                 </div>
                  <div className="mt-8 text-center text-sm text-muted-foreground">
                     <p>{disclaimer}</p>
