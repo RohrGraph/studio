@@ -8,18 +8,18 @@ export default function AblaufPage() {
   const steps = [
     {
       icon: FileCheck2,
-      title: "1. Datenübermittlung per Formular",
-      text: "Nach Ihrer Entscheidung für ein Paket erhalten Sie Zugang zu unserem digitalen Auftragsformular. Hier können Sie alle wichtigen Informationen sicher und bequem eintragen: Firmenname, Adresse, rechtliche Angaben für Impressum & Co. sowie Ihr Firmenlogo und Farbwünsche hochladen.",
+      title: "1. Daten übermitteln",
+      text: "Nach der Paketwahl erhalten Sie Zugang zu einem einfachen Online-Formular, über das Sie uns alle relevanten Informationen und Dateien für Ihre Website zukommen lassen.",
     },
     {
       icon: Paintbrush,
       title: "2. Design & Umsetzung",
-      text: "Basierend auf Ihren Angaben und Wünschen erstellen unsere Experten den ersten Entwurf Ihrer neuen Website. Wir kümmern uns um ein ansprechendes, modernes Design, das perfekt auf Ihre Fahrschule und Ihre Zielgruppe zugeschnitten ist.",
+      text: "Basierend auf Ihren Angaben erstellen unsere Experten den ersten Entwurf. Wir kümmern uns um ein modernes Design, das perfekt zu Ihrer Fahrschule passt.",
     },
     {
       icon: Rocket,
-      title: "3. Livegang & Optimierung",
-      text: "Nach Ihrer Freigabe schalten wir Ihre Website live. Doch damit nicht genug: Wir kümmern uns weiterhin um Wartung, Sicherheit und stehen Ihnen für Anpassungen zur Verfügung, damit Ihr digitaler Auftritt stets erfolgreich bleibt."
+      title: "3. Livegang & Service",
+      text: "Nach Ihrer Freigabe geht Ihre Website online. Wir kümmern uns weiterhin um Wartung und Sicherheit, damit Ihr digitaler Auftritt erfolgreich bleibt."
     }
   ];
 
