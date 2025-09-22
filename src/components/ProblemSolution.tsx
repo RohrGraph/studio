@@ -11,14 +11,14 @@ export default function ProblemSolution() {
             <h2 id="problem-solution-headline" className="text-xl text-muted-foreground md:text-right md:text-2xl">
               {problem}
             </h2>
-            <TrendingUp className="mx-auto h-12 w-12 rotate-[-45deg] text-primary md:rotate-0" />
+            <TrendingUp className="mx-auto h-16 w-16 rotate-[-45deg] text-primary md:h-24 md:w-24 md:rotate-0" />
             <p className="text-xl font-semibold tracking-tight md:text-2xl">
               {solution}
             </p>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-16">
-          <div className="relative flex items-center justify-center">
+        <div className="mt-16 grid grid-cols-1 gap-8 md:mt-24 md:grid-cols-2 md:gap-16">
+          <div className="relative mx-auto flex max-w-2xl items-center justify-center">
             <div className="absolute -left-4 -top-4 z-10 rounded-full bg-destructive px-4 py-2 text-sm font-bold text-destructive-foreground">ALT</div>
             <Image
               src={images.before.src}
@@ -29,7 +29,7 @@ export default function ProblemSolution() {
               data-ai-hint={images.before.hint}
             />
           </div>
-          <div className="relative flex items-center justify-center">
+          <div className="relative mx-auto flex max-w-2xl items-center justify-center">
             <div className="absolute -left-4 -top-4 z-10 rounded-full bg-green-600 px-4 py-2 text-sm font-bold text-white">NEU</div>
              <Image
                 src={images.after.src}
