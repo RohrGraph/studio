@@ -7,10 +7,10 @@ export default function ProblemSolution() {
   return (
     <section aria-labelledby="problem-solution-headline">
       <div className="container">
-        <div className="grid items-center gap-12 md:grid-cols-[1fr_auto_1fr] md:gap-16">
+        <div className="grid items-start gap-12 md:grid-cols-[1fr_auto_1fr] md:gap-8">
           
-          <div className="flex flex-col gap-8 text-center md:text-left">
-            <h2 id="problem-solution-headline" className="text-xl text-muted-foreground md:text-2xl h-24 flex items-center">
+          <div className="flex flex-col gap-4 text-center md:text-left">
+            <h2 id="problem-solution-headline" className="flex h-24 items-center justify-center text-xl text-muted-foreground md:justify-start md:text-2xl">
               {problem}
             </h2>
             <div className="relative mx-auto flex max-w-2xl items-center justify-center">
@@ -26,12 +26,12 @@ export default function ProblemSolution() {
             </div>
           </div>
 
-          <div className="hidden md:flex items-center justify-center h-full">
+          <div className="hidden h-full items-center justify-center md:flex">
             <TrendingUp className="h-32 w-32 text-primary" />
           </div>
 
-          <div className="flex flex-col gap-8 text-center md:text-left">
-             <p className="text-xl font-semibold tracking-tight md:text-2xl h-24 flex items-center">
+          <div className="flex flex-col gap-4 text-center md:text-left">
+             <p className="flex h-24 items-center justify-center text-xl font-semibold tracking-tight md:justify-start md:text-2xl">
               {solution}
             </p>
              <div className="relative mx-auto flex max-w-2xl items-center justify-center">
