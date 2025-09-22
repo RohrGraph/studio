@@ -58,7 +58,7 @@ export default function PricingPage() {
                         </TabsList>
                         {plans.map((plan) => (
                             <TabsContent key={plan.name} value={plan.name}>
-                                <Card className={cn('shadow-lg mt-6', plan.recommended && 'border-green-600 border-2')}>
+                                <Card className={cn('shadow-lg mt-6 relative', plan.recommended && 'border-green-600 border-2')}>
                                     {plan.recommended && (
                                         <div className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-green-600 px-4 py-1 text-sm font-bold text-white">
                                         Beliebteste Option
