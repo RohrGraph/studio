@@ -45,7 +45,8 @@ export const data = {
           "DSGVO konform",
           "Wartung & Updates",
           "1 Änderung pro Monat",
-          "Nur asynchrone Kommunikation"
+          "Nur asynchrone Kommunikation",
+          "monatlich kündbar"
         ]
       },
       {
@@ -57,7 +58,8 @@ export const data = {
           "Alles aus Basis",
           "Telefon/Zoom Support",
           "2–3 Änderungen pro Monat",
-          "SEO Boost & Analytics"
+          "SEO Boost & Analytics",
+          "monatlich kündbar"
         ]
       },
       {
@@ -69,7 +71,8 @@ export const data = {
           "Alles aus Pro",
           "Full Service (Content, Ads etc.)",
           "Landingpages inklusive",
-          "Dedizierter Account Manager"
+          "Dedizierter Account Manager",
+          "monatlich kündbar"
         ]
       }
     ]
