@@ -1,84 +1,105 @@
 export const data = {
   "site": {
-    "title": "WebStart – Website ohne Setup-Kosten",
-    "description": "Wir bauen deine Website kostenlos und betreuen sie für 99 € pro Monat – Hosting, Updates, Sicherheit & Support inklusive.",
-    "domain": "webstart.example",
-    "primaryCTA": { "label": "Kostenlos starten", "href": "#kontakt" },
-    "secondaryCTA": { "label": "Leistungen & Preis", "href": "#preis" }
-  },
-  "brand": {
-    "colors": { "primary": "#2E7D6B", "accent": "#FFC27A", "bg": "#FFFBF5", "text": "#1B1B1B" },
-    "font": { "heading": "Inter", "body": "Inter" }
+    "title": "Fahrschul-Websites | Ohne Stress zur neuen Website",
+    "description": "Professionelle Websites für Fahrschulen im Abo ab 97€/Monat. Keine Einmalkosten, inkl. Hosting, Wartung & DSGVO.",
+    "domain": "fahrschul-web.site",
+    "primaryCTA": { "label": "Demo ansehen", "href": "#demos" },
+    "secondaryCTA": { "label": "Jetzt kostenlos beraten lassen", "href": "#kontakt" }
   },
   "hero": {
-    "eyebrow": "Websites im Abo",
-    "headline": "Professionelle Website – ohne Einrichtungsgebühr",
-    "subline": "Wir erstellen deine Seite kostenlos und betreuen sie im 99 €-Monatsabo. Monatlich kündbar, DSGVO-konform, schnell live.",
-    "image": { "src": "https://picsum.photos/seed/webstart-hero/1200/800", "alt": "Website Mockup auf Laptop und Smartphone" },
-    "bullets": ["In 7–10 Tagen live", "Hosting & Wartung inklusive", "SEO-Basics & schnelle Ladezeiten"]
+    "headline": "Professionelle Website für Fahrschulen – ab 97€/Monat, komplett ohne Stress.",
+    "subline": "Keine Einmal-Kosten, keine Wartung, keine Kopfschmerzen. Ihre Website – fertig, sicher & immer aktuell."
   },
-  "socialProof": {
-    "logos": [
-      { "alt": "Logo 1", "src": "/images/logos/logo1.svg" },
-      { "alt": "Logo 2", "src": "/images/logos/logo2.svg" },
-      { "alt": "Logo 3", "src": "/images/logos/logo3.svg" },
-      { "alt": "Logo 4", "src": "/images/logos/logo4.svg" },
-      { "alt": "Logo 5", "src": "/images/logos/logo5.svg" }
-    ],
-    "quote": {
-      "text": "Endlich eine Website, die sich von selbst kümmert – wir konzentrieren uns aufs Geschäft.",
-      "author": "Musterkunde GmbH"
+  "problemSolution": {
+    "problem": "Viele Fahrschul-Websites sind veraltet, schwer bedienbar und bringen keine neuen Schüler.",
+    "solution": "Wir bauen Ihre Fahrschul-Website in 48h – Hosting, Updates & Support inklusive.",
+    "images": {
+      "before": { "src": "https://picsum.photos/seed/bad-website/1200/800", "alt": "Beispiel einer veralteten Website", "hint": "outdated website design" },
+      "after": { "src": "https://picsum.photos/seed/good-website/1200/800", "alt": "Beispiel einer modernen Website", "hint": "modern website design" }
     }
   },
-  "features": [
-    { "icon": "Palette", "title": "Kostenloses Design & Umsetzung", "text": "Wir entwerfen und bauen deine Website ohne Einmalgebühr – du zahlst nur das Abo." },
-    { "icon": "ShieldCheck", "title": "Hosting, Updates & Sicherheit", "text": "Wir betreiben deine Seite, spielen Updates ein und überwachen die Verfügbarkeit." },
-    { "icon": "TrendingUp", "title": "SEO-Basics & Performance", "text": "Saubere Struktur, schnelle Ladezeiten und technische Grundlagen für bessere Sichtbarkeit." },
-    { "icon": "Wrench", "title": "Support & kleine Änderungen", "text": "Monatliche Pflege inklusive – Texte/Bilder aktualisieren, Sektionen anpassen." }
-  ],
-  "process": [
-    { "step": 1, "title": "Kostenloses Erstgespräch", "text": "Ziele, Zielgruppe und Inhalte klären – unverbindlich." },
-    { "step": 2, "title": "Design-Draft", "text": "Klickbarer Entwurf in wenigen Tagen." },
-    { "step": 3, "title": "Go-Live", "text": "Nach deinem OK live – ohne Setup-Kosten." },
-    { "step": 4, "title": "Betreuung im Abo", "text": "Für 99 €/Monat Technik & Weiterentwicklung." }
-  ],
-  "pricing": {
-    "headline": "Ein Preis, alles drin.",
-    "plan": {
-      "name": "WebStart Abo",
-      "price": "99 € / Monat",
-      "vatNote": "zzgl. USt., monatlich kündbar",
-      "includes": [
-        "Kostenlose Erstellung (0 € Setup)",
-        "Hosting & SSL-Zertifikat",
-        "Wartung, Updates, Backups",
-        "Technische SEO-Basics",
-        "Monatliche Content-Änderungen (bis 1 Std.)"
-      ],
-      "cta": { "label": "Jetzt kostenlos starten", "href": "#kontakt" }
-    },
-    "disclaimer": "Größere Funktionsprojekte oder Shop-Features werden transparent und fair kalkuliert."
+  "process": {
+    "headline": "In 3 einfachen Schritten zu Ihrer neuen Website",
+    "subline": "Unser Prozess ist einfach, transparent und darauf ausgelegt, Sie schnell online zu bringen.",
+    "steps": [
+      { "step": 1, "title": "Formular ausfüllen", "text": "Schicken Sie uns Ihr Logo, Ihre Farben und Texte ganz einfach per Formular." },
+      { "step": 2, "title": "Website geht online", "text": "Innerhalb von 48 Stunden setzen wir alles um und Ihre neue Website ist live." },
+      { "step": 3, "title": "Faires Monatsabo", "text": "Sie zahlen nur die monatliche Pauschale. Alles andere ist inklusive." }
+    ]
   },
-  "faq": {
-    "headline": "Häufig gestellte Fragen",
+  "pricing": {
+    "headline": "Ein Preis, alles drin. Wählen Sie Ihr Paket.",
+    "cta": { "label": "Paket wählen", "href": "#kontakt" },
+    "disclaimer": "Alle Preise zzgl. USt., monatlich kündbar.",
+    "plans": [
+      {
+        "name": "Basis",
+        "price": "97€",
+        "priceSuffix": "/Monat",
+        "recommended": true,
+        "features": [
+          "Professionelle Website",
+          "Hosting + SSL + DSGVO",
+          "1 Änderung pro Monat",
+          "Wartung + Updates",
+          "Nur asynchrone Kommunikation"
+        ]
+      },
+      {
+        "name": "Pro",
+        "price": "297€",
+        "priceSuffix": "/Monat",
+        "recommended": false,
+        "features": [
+          "Alles aus Basis",
+          "Telefon/Zoom Support",
+          "2–3 Änderungen pro Monat",
+          "SEO Boost & Analytics"
+        ]
+      },
+      {
+        "name": "Premium",
+        "price": "497€",
+        "priceSuffix": "/Monat",
+        "recommended": false,
+        "features": [
+          "Alles aus Pro",
+          "Full Service (Content, Ads etc.)",
+          "Landingpages inklusive",
+          "Dedizierter Account Manager"
+        ]
+      }
+    ]
+  },
+  "benefits": {
+    "headline": "Ihre Vorteile auf einen Blick",
     "items": [
-      { "q": "Ist die Erstellung der Website wirklich kostenlos?", "a": "Ja, die Konzeption, das Design und die technische Umsetzung deiner neuen Website sind vollständig kostenlos. Unser Geschäftsmodell basiert auf dem monatlichen Service-Abo, es gibt keine versteckten Setup-Gebühren." },
-      { "q": "Gibt es eine Mindestvertragslaufzeit?", "a": "Nein, unser Abo ist monatlich kündbar. Wir sind davon überzeugt, dass du aufgrund des Werts und unseres Services bleibst, nicht wegen einer vertraglichen Bindung." },
-      { "q": "Wem gehören die Inhalte und die Domain?", "a": "Alle Inhalte (Texte, Bilder) gehören jederzeit dir. Die Domain wird auf deinen Namen registriert. Bei einer Kündigung erhältst du auf Wunsch einen vollständigen Export deiner Website-Daten." },
-      { "q": "Welche Art von Änderungen sind im Abo enthalten?", "a": "Kleinere redaktionelle Updates wie das Austauschen von Texten und Bildern, das Hinzufügen von Blogartikeln oder das Anpassen von Öffnungszeiten sind im monatlichen Abo abgedeckt." },
-      { "q": "Welche Technologie verwendet ihr für die Websites?", "a": "Wir setzen auf einen modernen, performanten Technologie-Stack, meist basierend auf Next.js und headless CMS-Systemen. Das sorgt für exzellente Ladezeiten, hohe Sicherheit und eine gute Grundlage für SEO." }
+      { "icon": "Clock", "title": "In 48h online – ohne Stress", "text": "Wir sind schnell, damit Sie schnell neue Schüler gewinnen." },
+      { "icon": "ShieldCheck", "title": "Immer sicher & DSGVO-konform", "text": "Technische Sorgen? Übernehmen wir komplett für Sie." },
+      { "icon": "Euro", "title": "Keine teuren Einmalkosten", "text": "Sparen Sie sich die hohe Anfangsinvestition." },
+      { "icon": "Smile", "title": "Einfache Monatspauschale", "text": "Ein fester Preis für alles. Planbar und transparent." },
+      { "icon": "CheckCircle2", "title": "Weniger als 1 Schüler/Monat", "text": "Die Kosten für die Website haben Sie schnell wieder drin." }
+    ]
+  },
+  "socialProof": {
+    "headline": "Vertrauen & Qualität",
+    "badge": "Made in Germany – DSGVO sicher",
+    "quotes": [
+      { "text": "Unsere neue Seite war in zwei Tagen online. Super Service!", "author": "Fahrschule Musterstadt" },
+      { "text": "Endlich eine Website, die modern aussieht und auf dem Handy funktioniert.", "author": "Fahrschule Beispielhausen" },
+      { "text": "Der Preis ist unschlagbar. Wir sparen uns viel Zeit und Nerven.", "author": "Fahrschule Testorf" }
+    ],
+    "demos": [
+        { "src": "https://picsum.photos/seed/demo1/800/600", "alt": "Demo Fahrschule City", "hint": "driving school website" },
+        { "src": "https://picsum.photos/seed/demo2/800/600", "alt": "Demo Fahrschule DriveSafe", "hint": "modern driving school" },
+        { "src": "https://picsum.photos/seed/demo3/800/600", "alt": "Demo Fahrschule Speedster", "hint": "clean website driving" }
     ]
   },
   "contact": {
-    "headline": "Kostenloses Konzept anfragen",
-    "subline": "Erzähl uns kurz, was du vorhast. Wir melden uns innerhalb von 24 Stunden mit einem unverbindlichen Vorschlag bei dir.",
-    "fields": [
-      { "name": "name", "label": "Name", "type": "text", "required": true },
-      { "name": "email", "label": "E-Mail", "type": "email", "required": true },
-      { "name": "company", "label": "Firma (optional)", "type": "text", "required": false },
-      { "name": "message", "label": "Was brauchst du? (Projekt, Idee, Ziele)", "type": "textarea", "required": true }
-    ],
-    "privacyNote": "Mit dem Absenden deiner Anfrage stimmst du unserer Datenschutzerklärung zu und erklärst dich einverstanden, dass wir dich zur Projektabstimmung kontaktieren dürfen."
+    "headline": "Bereit für Ihre neue Fahrschul-Website?",
+    "subline": "Fordern Sie eine kostenlose Demo an oder lassen Sie sich unverbindlich beraten. Wir melden uns in Kürze!",
+    "ctaLabel": "Jetzt starten ab 97 €/Monat",
+    "privacyNote": "Mit dem Absenden deiner Anfrage stimmst du unserer Datenschutzerklärung zu."
   },
   "footer": {
     "links": [
@@ -87,7 +108,7 @@ export const data = {
     ]
   },
   "seo": {
-    "ogImage": "https://picsum.photos/seed/webstart-og/1200/630",
-    "twitter": "@webstart"
+    "ogImage": "https://picsum.photos/seed/fahrschule-og/1200/630",
+    "twitter": "@fahrschulweb"
   }
 };

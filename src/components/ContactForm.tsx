@@ -55,7 +55,7 @@ export default function ContactForm() {
   }
 
   return (
-    <section id="kontakt" className="bg-secondary/50" aria-labelledby="contact-headline">
+    <section id="kontakt" className="bg-background" aria-labelledby="contact-headline">
       <div className="container">
         <div className="mx-auto max-w-3xl text-center">
           <h2 id="contact-headline">{headline}</h2>
@@ -86,7 +86,7 @@ export default function ContactForm() {
                     <FormItem>
                       <FormLabel>E-Mail</FormLabel>
                       <FormControl>
-                        <Input placeholder="max@beispiel.de" {...field} />
+                        <Input placeholder="max@fahrschule.de" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -98,9 +98,9 @@ export default function ContactForm() {
                   name="company"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Firma (optional)</FormLabel>
+                      <FormLabel>Name der Fahrschule (optional)</FormLabel>
                       <FormControl>
-                        <Input placeholder="Musterfirma GmbH" {...field} />
+                        <Input placeholder="Fahrschule Musterstadt" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -111,10 +111,10 @@ export default function ContactForm() {
                 name="message"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Was brauchen Sie?</FormLabel>
+                    <FormLabel>Ihre Nachricht</FormLabel>
                     <FormControl>
                       <Textarea
-                        placeholder="Erzählen Sie uns von Ihrem Projekt, Ihren Zielen oder Ihrer Idee..."
+                        placeholder="Erzählen Sie uns kurz von Ihren Wünschen..."
                         className="min-h-[120px]"
                         {...field}
                       />

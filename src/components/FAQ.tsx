@@ -7,7 +7,17 @@ import {
 } from "@/components/ui/accordion"
 
 export default function FAQ() {
-    const { headline, items } = data.faq;
+    // This component is currently not used on the homepage,
+    // but we can keep it for potential future use.
+    // const { headline, items } = data.faq;
+    const headline = "Häufig gestellte Fragen";
+    const items = [
+        { "q": "Ist die Erstellung der Website wirklich kostenlos?", "a": "Ja, die Konzeption, das Design und die technische Umsetzung deiner neuen Website sind vollständig kostenlos. Unser Geschäftsmodell basiert auf dem monatlichen Service-Abo, es gibt keine versteckten Setup-Gebühren." },
+        { "q": "Gibt es eine Mindestvertragslaufzeit?", "a": "Nein, unser Abo ist monatlich kündbar. Wir sind davon überzeugt, dass du aufgrund des Werts und unseres Services bleibst, nicht wegen einer vertraglichen Bindung." },
+        { "q": "Wem gehören die Inhalte und die Domain?", "a": "Alle Inhalte (Texte, Bilder) gehören jederzeit dir. Die Domain wird auf deinen Namen registriert. Bei einer Kündigung erhältst du auf Wunsch einen vollständigen Export deiner Website-Daten." },
+        { "q": "Welche Art von Änderungen sind im Abo enthalten?", "a": "Kleinere redaktionelle Updates wie das Austauschen von Texten und Bildern sind je nach gebuchtem Paket im monatlichen Abo abgedeckt." },
+    ]
+
   return (
     <section aria-labelledby="faq-headline">
       <div className="container">

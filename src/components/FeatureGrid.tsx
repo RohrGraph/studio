@@ -1,3 +1,6 @@
+// This component is not used anymore in the new design.
+// I will leave the file in case you want to use it later.
+// You can delete it if you want.
 import { Palette, ShieldCheck, TrendingUp, Wrench } from 'lucide-react';
 import { data } from '@/lib/data';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
@@ -21,22 +24,7 @@ export default function FeatureGrid() {
         </div>
 
         <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {data.features.map((feature) => {
-            const Icon = iconMap[feature.icon as keyof typeof iconMap] || Wrench;
-            return (
-              <Card key={feature.title} className="bg-background shadow-lg hover:shadow-xl transition-shadow">
-                <CardHeader>
-                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-primary text-primary-foreground">
-                    <Icon className="h-6 w-6" />
-                  </div>
-                  <CardTitle className="text-lg font-semibold">{feature.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">{feature.text}</p>
-                </CardContent>
-              </Card>
-            );
-          })}
+          
         </div>
       </div>
     </section>
