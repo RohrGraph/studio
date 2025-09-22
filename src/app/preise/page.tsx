@@ -8,7 +8,7 @@ import {
   TabsList,
   TabsTrigger,
 } from "@/components/ui/tabs"
-import { Card, CardHeader, CardTitle, CardContent, CardFooter } from '@/components/ui/card';
+import { Card, CardHeader, CardTitle, CardContent, CardFooter, CardDescription } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
 import SiteFooter from '@/components/SiteFooter';
 import { Car } from 'lucide-react';
@@ -51,32 +51,29 @@ export default function PricingPage() {
 
                 <div className="mx-auto mt-16 max-w-4xl">
                     <Tabs defaultValue={recommendedPlan.name} className="w-full">
-                        <TabsList className="grid w-full grid-cols-3">
+                        <TabsList className="grid w-full grid-cols-3 gap-4 bg-transparent p-0">
                             {plans.map((plan) => (
-                                <TabsTrigger key={plan.name} value={plan.name}>{plan.name}</TabsTrigger>
+                                <TabsTrigger key={plan.name} value={plan.name} className="h-auto flex-col gap-2 p-4 text-lg bg-secondary/50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
+                                    <span className="font-bold">{plan.name}</span>
+                                    <span className="text-base">{plan.price}</span>
+                                </TabsTrigger>
                             ))}
                         </TabsList>
                         {plans.map((plan) => (
                             <TabsContent key={plan.name} value={plan.name}>
-                                <Card className={cn('shadow-lg mt-6 relative', plan.recommended && 'border-green-600 border-2')}>
-                                    {plan.recommended && (
-                                        <div className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-green-600 px-4 py-1 text-sm font-bold text-white">
-                                        Beliebteste Option
-                                        </div>
-                                    )}
-                                    <CardHeader className="text-center">
-                                        <p className="font-semibold text-primary">{plan.name}</p>
-                                        <CardTitle className="!mt-2 text-5xl tracking-tight">
-                                        {plan.price}
-                                        </CardTitle>
-                                        <p className="text-sm text-muted-foreground">{plan.priceSuffix}</p>
+                                <Card className="mt-8 shadow-lg">
+                                    <CardHeader>
+                                        <CardTitle className="text-3xl">{plan.name} Paket</CardTitle>
+                                        <CardDescription className="!mt-2 text-base">
+                                            Ideal für Fahrschulen, die einen soliden Startpunkt suchen.
+                                        </CardDescription>
                                     </CardHeader>
                                     <CardContent>
-                                        <div className="space-y-4 text-left">
+                                        <div className="space-y-6 text-left">
                                             {plan.features.map((feature, index) => (
                                                 <div key={index}>
-                                                    <h3 className="font-semibold">{feature.title}</h3>
-                                                    <p className="text-muted-foreground">{feature.description}</p>
+                                                    <h3 className="font-semibold text-lg">{feature.title}</h3>
+                                                    <p className="mt-1 text-muted-foreground">{feature.description}</p>
                                                 </div>
                                             ))}
                                         </div>
@@ -84,7 +81,7 @@ export default function PricingPage() {
                                     <CardFooter className="flex-col gap-4 pt-6">
                                         <Button 
                                             size="lg"
-                                            className={cn('w-full', plan.recommended && 'bg-green-600 hover:bg-green-700')}
+                                            className='w-full'
                                             asChild
                                         >
                                             <Link href="#kontakt">{cta.label}</Link>
