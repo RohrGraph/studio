@@ -55,7 +55,7 @@ export default function PricingPage() {
                             {plans.map((plan) => (
                                 <TabsTrigger key={plan.name} value={plan.name} asChild>
                                   <Card className={cn(
-                                    'cursor-pointer shadow-lg data-[state=inactive]:bg-secondary/30 data-[state=inactive]:hover:bg-secondary/50 data-[state=active]:border-primary data-[state=active]:shadow-2xl',
+                                    'cursor-pointer shadow-lg data-[state=inactive]:bg-secondary/30 data-[state=inactive]:hover:bg-secondary/50 data-[state=active]:border-2 data-[state=active]:border-primary data-[state=active]:shadow-2xl relative',
                                     plan.recommended && "border-green-600"
                                   )}>
                                      {plan.recommended && (
@@ -74,33 +74,36 @@ export default function PricingPage() {
                                 </TabsTrigger>
                             ))}
                         </TabsList>
-                        {plans.map((plan) => (
-                            <TabsContent key={plan.name} value={plan.name}>
-                                <div className="mt-10">
-                                    <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-                                        {plan.features.map((feature, index) => (
-                                            <Card key={index} className="flex flex-col border-primary/50">
-                                                <CardHeader>
-                                                    <CardTitle className="text-xl">{feature.title}</CardTitle>
-                                                </CardHeader>
-                                                <CardContent className="flex-1">
-                                                    <p className="text-muted-foreground">{feature.description}</p>
-                                                </CardContent>
-                                            </Card>
-                                        ))}
+
+                        <div className="mt-10">
+                            {plans.map((plan) => (
+                                <TabsContent key={plan.name} value={plan.name} className="mt-0">
+                                    <div className="mt-10">
+                                        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+                                            {plan.features.map((feature, index) => (
+                                                <Card key={index} className="flex flex-col border border-primary/50">
+                                                    <CardHeader>
+                                                        <CardTitle className="text-xl">{feature.title}</CardTitle>
+                                                    </CardHeader>
+                                                    <CardContent className="flex-1">
+                                                        <p className="text-muted-foreground">{feature.description}</p>
+                                                    </CardContent>
+                                                </Card>
+                                            ))}
+                                        </div>
+                                        <div className="mt-12 flex justify-center">
+                                            <Button 
+                                                size="lg"
+                                                className='w-full max-w-md'
+                                                asChild
+                                            >
+                                                <Link href="#kontakt">{cta.label}</Link>
+                                            </Button>
+                                        </div>
                                     </div>
-                                    <div className="mt-12 flex justify-center">
-                                        <Button 
-                                            size="lg"
-                                            className='w-full max-w-md'
-                                            asChild
-                                        >
-                                            <Link href="#kontakt">{cta.label}</Link>
-                                        </Button>
-                                    </div>
-                                </div>
-                            </TabsContent>
-                        ))}
+                                </TabsContent>
+                            ))}
+                        </div>
                     </Tabs>
                 </div>
                  <div className="mt-8 text-center text-sm text-muted-foreground">
