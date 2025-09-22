@@ -56,7 +56,6 @@ export default function PricingPage() {
                                 <TabsTrigger key={plan.name} value={plan.name} asChild>
                                   <Card className={cn(
                                     'cursor-pointer shadow-lg data-[state=inactive]:bg-secondary/30 data-[state=inactive]:hover:bg-secondary/50 data-[state=active]:border-2 data-[state=active]:border-primary data-[state=active]:shadow-2xl relative',
-                                    plan.recommended && "border-green-600"
                                   )}>
                                      {plan.recommended && (
                                         <div className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-green-600 px-4 py-1 text-sm font-bold text-white">
@@ -78,18 +77,21 @@ export default function PricingPage() {
                         <div className="mt-16">
                             {plans.map((plan) => (
                                 <TabsContent key={plan.name} value={plan.name} className="mt-0">
-                                    <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-                                        {plan.features.map((feature, index) => (
-                                            <Card key={index} className="flex flex-col border border-primary/50">
-                                                <CardHeader>
-                                                    <CardTitle className="text-xl">{feature.title}</CardTitle>
-                                                </CardHeader>
-                                                <CardContent className="flex-1">
-                                                    <p className="text-muted-foreground">{feature.description}</p>
-                                                </CardContent>
-                                            </Card>
-                                        ))}
-                                    </div>
+                                    <Card className="shadow-lg border-primary/20">
+                                        <CardContent className="pt-8">
+                                            <ul className="space-y-4">
+                                                {plan.features.map((feature, index) => (
+                                                    <li key={index} className="flex items-start gap-4">
+                                                        <Check className="mt-1 h-5 w-5 flex-shrink-0 text-primary" />
+                                                        <div>
+                                                            <h4 className="font-semibold">{feature.title}</h4>
+                                                            <p className="text-muted-foreground">{feature.description}</p>
+                                                        </div>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </CardContent>
+                                    </Card>
                                     <div className="mt-12 flex justify-center">
                                         <Button 
                                             size="lg"
