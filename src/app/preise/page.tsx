@@ -2,6 +2,12 @@ import Link from 'next/link';
 import { Check } from 'lucide-react';
 import { data } from '@/lib/data';
 import { Button } from '@/components/ui/button';
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from "@/components/ui/tabs"
 import { Card, CardHeader, CardTitle, CardContent, CardFooter } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
 import SiteFooter from '@/components/SiteFooter';
@@ -11,6 +17,7 @@ import FAQ from '@/components/FAQ';
 
 export default function PricingPage() {
   const { headline, plans, cta, disclaimer } = data.pricing;
+  const recommendedPlan = plans.find(p => p.recommended) || plans[0];
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -39,56 +46,57 @@ export default function PricingPage() {
         <section id="preise" className="bg-background" aria-labelledby="pricing-headline">
             <div className="container py-12 md:py-16 lg:py-20">
                 <div className="mx-auto max-w-3xl text-center">
-                <h1 id="pricing-headline" className="text-4xl sm:text-5xl lg:text-6xl">{headline}</h1>
+                    <h1 id="pricing-headline" className="text-4xl sm:text-5xl lg:text-6xl">{headline}</h1>
                 </div>
 
-                <div className="mt-16 grid grid-cols-1 items-start gap-8 lg:grid-cols-3">
-                {plans.map((plan) => (
-                    <Card 
-                    key={plan.name}
-                    className={cn(
-                        'shadow-lg hover:shadow-2xl transition-shadow',
-                        plan.recommended && 'border-green-600 border-2 shadow-2xl relative'
-                    )}
-                    >
-                    {plan.recommended && (
-                        <div className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-green-600 px-4 py-1 text-sm font-bold text-white">
-                        Beliebteste Option
-                        </div>
-                    )}
-                    <CardHeader className="text-center">
-                        <p className="font-semibold text-primary">{plan.name}</p>
-                        <CardTitle className="!mt-2 text-5xl tracking-tight">
-                        {plan.price}
-                        </CardTitle>
-                        <p className="text-sm text-muted-foreground">{plan.priceSuffix}</p>
-                    </CardHeader>
-                    <CardContent>
-                        <ul className="space-y-4">
-                        {plan.features.map((item) => (
-                            <li key={item} className="flex items-start gap-3">
-                            <Check className="mt-1 h-5 w-5 flex-shrink-0 text-primary" />
-                            <span className="text-foreground/90">{item}</span>
-                            </li>
+                <div className="mx-auto mt-16 max-w-4xl">
+                    <Tabs defaultValue={recommendedPlan.name} className="w-full">
+                        <TabsList className="grid w-full grid-cols-3">
+                            {plans.map((plan) => (
+                                <TabsTrigger key={plan.name} value={plan.name}>{plan.name}</TabsTrigger>
+                            ))}
+                        </TabsList>
+                        {plans.map((plan) => (
+                            <TabsContent key={plan.name} value={plan.name}>
+                                <Card className={cn('shadow-lg mt-6', plan.recommended && 'border-green-600 border-2')}>
+                                    {plan.recommended && (
+                                        <div className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-green-600 px-4 py-1 text-sm font-bold text-white">
+                                        Beliebteste Option
+                                        </div>
+                                    )}
+                                    <CardHeader className="text-center">
+                                        <p className="font-semibold text-primary">{plan.name}</p>
+                                        <CardTitle className="!mt-2 text-5xl tracking-tight">
+                                        {plan.price}
+                                        </CardTitle>
+                                        <p className="text-sm text-muted-foreground">{plan.priceSuffix}</p>
+                                    </CardHeader>
+                                    <CardContent>
+                                        <ul className="space-y-4">
+                                        {plan.features.map((item) => (
+                                            <li key={item} className="flex items-start gap-3">
+                                            <Check className="mt-1 h-5 w-5 flex-shrink-0 text-primary" />
+                                            <span className="text-foreground/90">{item}</span>
+                                            </li>
+
+                                        ))}
+                                        </ul>
+                                    </CardContent>
+                                    <CardFooter className="flex-col gap-4 pt-6">
+                                        <Button 
+                                            size="lg"
+                                            className={cn('w-full', plan.recommended && 'bg-green-600 hover:bg-green-700')}
+                                            asChild
+                                        >
+                                            <Link href="#kontakt">{cta.label}</Link>
+                                        </Button>
+                                    </CardFooter>
+                                </Card>
+                            </TabsContent>
                         ))}
-                        </ul>
-                    </CardContent>
-                    <CardFooter className="flex-col gap-4 pt-6">
-                        <Button 
-                        size={plan.recommended ? 'lg' : 'default'}
-                        className={cn(
-                            'w-full',
-                            plan.recommended && 'bg-green-600 hover:bg-green-700'
-                        )}
-                        asChild
-                        >
-                        <Link href="#kontakt">{cta.label}</Link>
-                        </Button>
-                    </CardFooter>
-                    </Card>
-                ))}
+                    </Tabs>
                 </div>
-                <div className="mt-8 text-center text-sm text-muted-foreground">
+                 <div className="mt-8 text-center text-sm text-muted-foreground">
                     <p>{disclaimer}</p>
                 </div>
             </div>
