@@ -67,39 +67,37 @@ export default function PricingPage() {
                                       <p className="font-semibold text-primary">{plan.name}</p>
                                       <CardTitle className="!mt-2 text-4xl tracking-tight">
                                         {plan.price}
+                                        <span className="text-base font-normal text-muted-foreground">{plan.priceSuffix}</span>
                                       </CardTitle>
-                                      <p className="text-sm text-muted-foreground">{plan.priceSuffix}</p>
                                     </CardHeader>
                                   </Card>
                                 </TabsTrigger>
                             ))}
                         </TabsList>
 
-                        <div className="mt-10">
+                        <div className="mt-16">
                             {plans.map((plan) => (
                                 <TabsContent key={plan.name} value={plan.name} className="mt-0">
-                                    <div className="mt-10">
-                                        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-                                            {plan.features.map((feature, index) => (
-                                                <Card key={index} className="flex flex-col border border-primary/50">
-                                                    <CardHeader>
-                                                        <CardTitle className="text-xl">{feature.title}</CardTitle>
-                                                    </CardHeader>
-                                                    <CardContent className="flex-1">
-                                                        <p className="text-muted-foreground">{feature.description}</p>
-                                                    </CardContent>
-                                                </Card>
-                                            ))}
-                                        </div>
-                                        <div className="mt-12 flex justify-center">
-                                            <Button 
-                                                size="lg"
-                                                className='w-full max-w-md'
-                                                asChild
-                                            >
-                                                <Link href="#kontakt">{cta.label}</Link>
-                                            </Button>
-                                        </div>
+                                    <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+                                        {plan.features.map((feature, index) => (
+                                            <Card key={index} className="flex flex-col border border-primary/50">
+                                                <CardHeader>
+                                                    <CardTitle className="text-xl">{feature.title}</CardTitle>
+                                                </CardHeader>
+                                                <CardContent className="flex-1">
+                                                    <p className="text-muted-foreground">{feature.description}</p>
+                                                </CardContent>
+                                            </Card>
+                                        ))}
+                                    </div>
+                                    <div className="mt-12 flex justify-center">
+                                        <Button 
+                                            size="lg"
+                                            className='w-full max-w-md'
+                                            asChild
+                                        >
+                                            <Link href="#kontakt">{cta.label}</Link>
+                                        </Button>
                                     </div>
                                 </TabsContent>
                             ))}
