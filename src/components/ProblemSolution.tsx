@@ -1,16 +1,20 @@
 import Image from 'next/image';
 import { data } from '@/lib/data';
-import { ArrowUp } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
 
 export default function ProblemSolution() {
   const { problem, solution, images } = data.problemSolution;
   return (
     <section aria-labelledby="problem-solution-headline">
       <div className="container">
-        <div className="mx-auto max-w-3xl text-center">
-          <h2 id="problem-solution-headline" className="text-2xl md:text-3xl">{problem}</h2>
-          <ArrowUp className="mx-auto my-6 h-8 w-8 text-primary" />
-          <p className="text-2xl font-semibold tracking-tight sm:text-3xl">{solution}</p>
+        <div className="grid items-center gap-8 md:grid-cols-3 md:gap-12">
+            <h2 id="problem-solution-headline" className="text-xl text-muted-foreground md:text-right md:text-2xl">
+              {problem}
+            </h2>
+            <TrendingUp className="mx-auto h-12 w-12 rotate-[-45deg] text-primary md:rotate-0" />
+            <p className="text-xl font-semibold tracking-tight md:text-2xl">
+              {solution}
+            </p>
         </div>
 
         <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-16">
