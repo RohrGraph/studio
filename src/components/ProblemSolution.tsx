@@ -7,39 +7,46 @@ export default function ProblemSolution() {
   return (
     <section aria-labelledby="problem-solution-headline">
       <div className="container">
-        <div className="grid items-center gap-8 md:grid-cols-3 md:gap-12">
-            <h2 id="problem-solution-headline" className="text-xl text-muted-foreground md:text-right md:text-2xl">
+        <div className="grid items-start gap-12 md:grid-cols-[1fr_auto_1fr] md:gap-16">
+          
+          <div className="flex flex-col gap-8 text-center md:text-left">
+            <h2 id="problem-solution-headline" className="text-xl text-muted-foreground md:text-2xl">
               {problem}
             </h2>
-            <TrendingUp className="mx-auto h-16 w-16 rotate-[-45deg] text-primary md:h-24 md:w-24 md:rotate-0" />
-            <p className="text-xl font-semibold tracking-tight md:text-2xl">
-              {solution}
-            </p>
-        </div>
-
-        <div className="mt-16 grid grid-cols-1 gap-8 md:mt-24 md:grid-cols-2 md:gap-16">
-          <div className="relative mx-auto flex max-w-2xl items-center justify-center">
-            <div className="absolute -left-4 -top-4 z-10 rounded-full bg-destructive px-4 py-2 text-sm font-bold text-destructive-foreground">ALT</div>
-            <Image
-              src={images.before.src}
-              alt={images.before.alt}
-              width={1200}
-              height={800}
-              className="rounded-2xl shadow-2xl"
-              data-ai-hint={images.before.hint}
-            />
-          </div>
-          <div className="relative mx-auto flex max-w-2xl items-center justify-center">
-            <div className="absolute -left-4 -top-4 z-10 rounded-full bg-green-600 px-4 py-2 text-sm font-bold text-white">NEU</div>
-             <Image
-                src={images.after.src}
-                alt={images.after.alt}
+            <div className="relative mx-auto flex max-w-2xl items-center justify-center">
+              <div className="absolute -left-4 -top-4 z-10 rounded-full bg-destructive px-4 py-2 text-sm font-bold text-destructive-foreground">ALT</div>
+              <Image
+                src={images.before.src}
+                alt={images.before.alt}
                 width={1200}
                 height={800}
                 className="rounded-2xl shadow-2xl"
-                data-ai-hint={images.after.hint}
+                data-ai-hint={images.before.hint}
               />
+            </div>
           </div>
+
+          <div className="hidden md:flex items-center justify-center h-full">
+            <TrendingUp className="h-24 w-24 text-primary" />
+          </div>
+
+          <div className="flex flex-col gap-8 text-center md:text-left">
+             <p className="text-xl font-semibold tracking-tight md:text-2xl">
+              {solution}
+            </p>
+             <div className="relative mx-auto flex max-w-2xl items-center justify-center">
+              <div className="absolute -left-4 -top-4 z-10 rounded-full bg-green-600 px-4 py-2 text-sm font-bold text-white">NEU</div>
+              <Image
+                  src={images.after.src}
+                  alt={images.after.alt}
+                  width={1200}
+                  height={800}
+                  className="rounded-2xl shadow-2xl"
+                  data-ai-hint={images.after.hint}
+                />
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
