@@ -2,7 +2,6 @@ import Link from 'next/link';
 import { data } from '@/lib/data';
 import { Button } from '@/components/ui/button';
 import Hero from '@/components/Hero';
-import SocialProof from '@/components/SocialProof';
 import FeatureGrid from '@/components/FeatureGrid';
 import Process from '@/components/Process';
 import Pricing from '@/components/Pricing';
@@ -34,7 +33,6 @@ export default function Home() {
       </header>
       <main className="flex-1">
         <Hero />
-        <SocialProof />
         <FeatureGrid />
         <Process />
         <Pricing />
