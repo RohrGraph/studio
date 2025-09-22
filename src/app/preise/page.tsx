@@ -49,45 +49,41 @@ export default function PricingPage() {
                     <h1 id="pricing-headline" className="text-4xl sm:text-5xl lg:text-6xl">{headline}</h1>
                 </div>
 
-                <div className="mx-auto mt-16 max-w-4xl">
+                <div className="mx-auto mt-16 max-w-5xl">
                     <Tabs defaultValue={recommendedPlan.name} className="w-full">
-                        <TabsList className="grid w-full grid-cols-3 gap-4 bg-transparent p-0">
+                        <TabsList className="grid w-full grid-cols-1 gap-4 bg-transparent p-0 sm:grid-cols-3">
                             {plans.map((plan) => (
-                                <TabsTrigger key={plan.name} value={plan.name} className="h-auto flex-col gap-2 p-4 text-lg bg-secondary/50 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
+                                <TabsTrigger key={plan.name} value={plan.name} className="h-auto flex-col items-center justify-center gap-2 rounded-xl p-6 text-xl data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=inactive]:bg-secondary/50 sm:flex-row">
                                     <span className="font-bold">{plan.name}</span>
-                                    <span className="text-base">{plan.price}</span>
+                                    <span className="font-normal">{plan.price}</span>
                                 </TabsTrigger>
                             ))}
                         </TabsList>
                         {plans.map((plan) => (
                             <TabsContent key={plan.name} value={plan.name}>
-                                <Card className="mt-8 shadow-lg">
-                                    <CardHeader>
-                                        <CardTitle className="text-3xl">{plan.name} Paket</CardTitle>
-                                        <CardDescription className="!mt-2 text-base">
-                                            Ideal für Fahrschulen, die einen soliden Startpunkt suchen.
-                                        </CardDescription>
-                                    </CardHeader>
-                                    <CardContent>
-                                        <div className="space-y-6 text-left">
-                                            {plan.features.map((feature, index) => (
-                                                <div key={index}>
-                                                    <h3 className="font-semibold text-lg">{feature.title}</h3>
-                                                    <p className="mt-1 text-muted-foreground">{feature.description}</p>
-                                                </div>
-                                            ))}
-                                        </div>
-                                    </CardContent>
-                                    <CardFooter className="flex-col gap-4 pt-6">
+                                <div className="mt-10">
+                                    <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+                                        {plan.features.map((feature, index) => (
+                                            <Card key={index} className="flex flex-col">
+                                                <CardHeader>
+                                                    <CardTitle className="text-xl">{feature.title}</CardTitle>
+                                                </CardHeader>
+                                                <CardContent className="flex-1">
+                                                    <p className="text-muted-foreground">{feature.description}</p>
+                                                </CardContent>
+                                            </Card>
+                                        ))}
+                                    </div>
+                                    <div className="mt-12 flex justify-center">
                                         <Button 
                                             size="lg"
-                                            className='w-full'
+                                            className='w-full max-w-md'
                                             asChild
                                         >
                                             <Link href="#kontakt">{cta.label}</Link>
                                         </Button>
-                                    </CardFooter>
-                                </Card>
+                                    </div>
+                                </div>
                             </TabsContent>
                         ))}
                     </Tabs>
