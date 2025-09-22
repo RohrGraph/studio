@@ -7,7 +7,7 @@ export default function ProblemSolution() {
   return (
     <section aria-labelledby="problem-solution-headline">
       <div className="container">
-        <div className="grid items-start gap-12 md:grid-cols-[1fr_auto_1fr] md:gap-16">
+        <div className="grid items-center gap-12 md:grid-cols-[1fr_auto_1fr] md:gap-16">
           
           <div className="flex flex-col gap-8 text-center md:text-left">
             <h2 id="problem-solution-headline" className="text-xl text-muted-foreground md:text-2xl">
@@ -27,7 +27,7 @@ export default function ProblemSolution() {
           </div>
 
           <div className="hidden md:flex items-center justify-center h-full">
-            <TrendingUp className="h-24 w-24 text-primary" />
+            <TrendingUp className="h-32 w-32 text-primary" />
           </div>
 
           <div className="flex flex-col gap-8 text-center md:text-left">
