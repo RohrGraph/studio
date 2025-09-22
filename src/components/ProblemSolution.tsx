@@ -10,7 +10,7 @@ export default function ProblemSolution() {
         <div className="grid items-center gap-12 md:grid-cols-[1fr_auto_1fr] md:gap-16">
           
           <div className="flex flex-col gap-8 text-center md:text-left">
-            <h2 id="problem-solution-headline" className="text-xl text-muted-foreground md:text-2xl">
+            <h2 id="problem-solution-headline" className="text-xl text-muted-foreground md:text-2xl h-24 flex items-center">
               {problem}
             </h2>
             <div className="relative mx-auto flex max-w-2xl items-center justify-center">
@@ -31,7 +31,7 @@ export default function ProblemSolution() {
           </div>
 
           <div className="flex flex-col gap-8 text-center md:text-left">
-             <p className="text-xl font-semibold tracking-tight md:text-2xl">
+             <p className="text-xl font-semibold tracking-tight md:text-2xl h-24 flex items-center">
               {solution}
             </p>
              <div className="relative mx-auto flex max-w-2xl items-center justify-center">
