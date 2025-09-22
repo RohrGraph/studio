@@ -39,9 +39,12 @@ export const data = {
         "recommended": true,
         "features": [
           "Professionelle Website",
-          "Hosting (.web.app Domain) + SSL + DSGVO",
+          "Handy freundlich",
+          "Hosting (.web.app Domain)",
+          "SSL Zertifikat",
+          "DSGVO konform",
+          "Wartung & Updates",
           "1 Änderung pro Monat",
-          "Wartung + Updates",
           "Nur asynchrone Kommunikation"
         ]
       },
